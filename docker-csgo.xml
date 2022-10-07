@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>CSGO Server</Name>
+    <Repository>timche/csgo:pug-practice</Repository>
+    <Registry>https://hub.docker.com/r/timche/csgo/</Registry>
+    <Network>host</Network>
+    <MyIP/>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Overview></Overview>
+    <Category>GameServers:</Category>
+    <WebUI/>
+    <TemplateURL/>
+    <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/csgo.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <CPUset/>
+    <DateInstalled/>
+    <DonateText/>
+    <DonateLink/>
+    <Requires/>
+    <Config Name="CSGO_PATH" Target="/csgo" Default="" Mode="rw" Description="Container Path: /csgo" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/csgo-server</Config>
+    <Config Name="CSGO_GSLT" Target="CSGO_GSLT" Default="" Mode="" Description="Your Game Server Login Token (GSLT) if you want to run the server on the internet." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="CSGO_WS_API_KEY" Target="CSGO_WS_API_KEY" Default="" Mode="" Description="Your Steam Web API Key to download workshop maps." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+    <Config Name="CSGO_IP" Target="CSGO_IP" Default="0.0.0.0" Mode="" Description="Internet IP the server is accessible from. In most cases the default value is sufficient, but if you want to run a GOTV server or have issues connecting to the server, setting the IP can help." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="CSGO_PORT" Target="CSGO_PORT" Default="27015" Mode="" Description="Port the server is listening to." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="CSGO_HOSTNAME" Target="CSGO_HOSTNAME" Default="CSGO" Mode="" Description="The server name. It can't contain spaces, so if you need a server name with spaces, set hostname in a config instead, e.g. server.cfg." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="CSGO_RCON_PW" Target="CSGO_RCON_PW" Default="changeme" Mode="" Description="RCON password to administrate the server." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="CSGO_PW" Target="CSGO_PW" Default="" Mode="" Description="Password to join the server." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="CSGO_MAP" Target="CSGO_MAP" Default="de_dust2" Mode="" Description="Start the server with a specific map." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+    <Config Name="CSGO_TICKRATE" Target="CSGO_TICKRATE" Default="64" Mode="" Description="Server tick rate which can be 64 or 128. The default value gives the best game experience, but also requires most server hardware resources." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+    <Config Name="SOURCEMOD_ADMINS" Target="SOURCEMOD_ADMINS" Default="" Mode="" Description="List of comma-separated Steam IDs that are SourceMod admins (e.g. STEAM_0:0:123,STEAM_0:1:234) with z flag." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+    <Config Name="DEBUG" Target="DEBUG" Default="false" Mode="" Description="Print all executed commands for better debugging." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+</Container>
